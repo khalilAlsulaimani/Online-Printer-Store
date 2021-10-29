@@ -36,7 +36,7 @@ nav li{
 }
 
 nav a{
-    color:#444;
+    color:white;
     text-decoration: none;
     text-transform:uppercase;
 
@@ -59,6 +59,10 @@ nav a:before{
 
 nav a:hover::before{
     width: 100%;
+}
+
+nav .current{
+    color: black;
 }
 
 #container #header {
