@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -9,75 +11,76 @@ body {
 }
 
 #logo {
-  
-   
-   background-image: url('Images\ShopLogo.png');
-   float: left;
-   overflow: hidden;
-   padding: 5px;
-   margin-top:10px;
-   
+
+
+    background-image: url('Images\ShopLogo.png');
+    float: left;
+    overflow: hidden;
+    padding: 5px;
+
+
 }
 
 
-nav{
+nav {
     float: right;
 }
 
-nav ul{
+nav ul {
     margin: 0;
-    padding-right:490px;
-    list-style:none;
+    padding-right: 490px;
+    list-style: none;
 }
 
-nav li{
+nav li {
     display: inline-block;
     padding-top: 44px;
     padding-right: 50px;
     position: relative;
 }
 
-nav a{
-    color:white;
+nav a {
+    color: white;
     text-decoration: none;
-    text-transform:uppercase;
+    text-transform: uppercase;
 
 }
 
-nav a:hover{
+nav a:hover {
     color: #000;
 
 }
 
-nav a:before{
-    content:'';
-    display:block;
-    height:5px;
-    width:0%;
+nav a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
     background-color: #444;
-    top:0;
-    transition:all ease-in-out 250ms;
+    top: 0;
+    transition: all ease-in-out 250ms;
 }
 
-nav a:hover::before{
+nav a:hover::before {
     width: 100%;
 }
 
-nav .current{
+nav .current {
     color: black;
 }
 
 #container #header {
-    background-color:#55d6aa;
+    background-color: #55d6aa;
     text-align: center;
     font: 24px Verdana, Arial, Helvetica, sans-serif;
 }
 
-#container #header::after{
-    content:'';
-    display:table;
-    clear:both;
+#container #header::after {
+    content: '';
+    display: table;
+    clear: both;
 }
+
 #container #content {
     font: 12px Verdana, Arial, Helvetica, sans-serif;
     text-align: center;
@@ -87,30 +90,52 @@ nav .current{
     float: left;
     width: 10%;
     height: 550px;
-    background-color:white;
+    background-color: white;
 }
 
 #content .col2 {
-    width:80%;
-    margin-left: 5%;
-    background-color: #CC99FF;
+    width: 90%;
     height: 550px;
-    border-radius: 10px;
+
 }
+
+
+#content .col2 {
+    width: 90%;
+    height: 550px;
+    color: black;
+    align-items: center;
+    font-family:'Playfair Display';
+    font-size: 22px;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#locationLink:visited{
+    color:blue;
+}
+#locationLink:hover{
+    color:red;
+}
+
+#factoryPic{
+    float: left;
+}
+
+
 
 #content .col3 {
     float: right;
-    width: 200px;
-    background-color: #99FFCC;
+    width: 10%;
     height: 550px;
-    border-radius: 10px;
 }
 
 #container #footer {
     clear: both;
     padding: 5px;
-    color:white;
-    background-color:black;
+    color: white;
+    background-color: gray;
     font: 12px Arial, Helvetica, sans-serif;
     text-align: center;
     height: 65px;
