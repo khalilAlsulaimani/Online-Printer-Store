@@ -5,21 +5,73 @@ body {
 
 #container {
     margin: 0 auto;
-    width: 960px;
+    width: 100%;
 }
 
 #logo {
-    float: left;
-    margin:15px;
+  
+   
+   background-image: url('Images\ShopLogo.png');
+   float: left;
+   overflow: hidden;
+   padding: 5px;
+}
+
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding-right:490px;
+    list-style:none;
+}
+
+nav li{
+    display: inline-block;
+    padding-top: 23px;
+    padding-right: 50px;
+    position: relative;
+}
+
+nav a{
+    color:#444;
+    text-decoration: none;
+    text-transform:uppercase;
+
+}
+
+nav a:hover{
+    color: #000;
+
+}
+
+nav a:before{
+    content:'';
+    display:block;
+    height:5px;
+    width:0%;
+    background-color: #444;
+    top:0;
+    transition:all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
 }
 
 #container #header {
-    height: 100px;
-    background-color: #FFFFCC;
+    background-color:#55d6aa;
     text-align: center;
     font: 24px Verdana, Arial, Helvetica, sans-serif;
 }
 
+#container #header::after{
+    content:'';
+    display:table;
+    clear:both;
+}
 #container #content {
     font: 12px Verdana, Arial, Helvetica, sans-serif;
     text-align: center;
@@ -27,29 +79,33 @@ body {
 
 #content .col1 {
     float: left;
-    width: 200px;
-    height: 400px;
-    background-color: #99CCFF;
+    width: 10%;
+    height: 550px;
+    background-color:white;
 }
 
 #content .col2 {
-    float: left;
-    width: 540px;
-    margin-left: 10px;
+    width:80%;
+    margin-left: 5%;
     background-color: #CC99FF;
-    height: 400px;
+    height: 550px;
+    border-radius: 10px;
 }
 
 #content .col3 {
     float: right;
     width: 200px;
     background-color: #99FFCC;
-    height: 400px;
+    height: 550px;
+    border-radius: 10px;
 }
 
 #container #footer {
     clear: both;
-    background-color: #996633;
+    padding: 5px;
+    color:white;
+    background-color:black;
     font: 12px Arial, Helvetica, sans-serif;
     text-align: center;
+    height: 65px;
 }
