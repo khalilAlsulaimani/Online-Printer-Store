@@ -104,13 +104,12 @@ div.nav .current {
 #locationLink:visited {
   color: blue;
 }
+
 #locationLink:hover {
   color: red;
 }
 
-#factoryPic {
-  float: left;
-}
+
 
 #content .col3 {
   float: right;
