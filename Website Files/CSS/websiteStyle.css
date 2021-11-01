@@ -84,7 +84,7 @@ div.nav .current {
 #content .col1 {
   float: left;
   width: 10%;
-  height: 550px;
+  height: 700px;
   background-color: white;
 }
 
@@ -92,7 +92,7 @@ div.nav .current {
 #content .col2 {
   width: 90%;
   min-width: 500px;
-  height: 550px;
+  height: 700px;
   color: black;
   align-items: center;
   font-family: "Playfair Display";
@@ -115,7 +115,7 @@ div.nav .current {
 #content .col3 {
   float: right;
   width: 10%;
-  height: 550px;
+  height: 700px;
 }
 
 #container #footer {
