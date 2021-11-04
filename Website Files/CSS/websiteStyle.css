@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-
+/*header section start */
 #logo {
   background-image: url("Images\ShopLogo.png");
   float: left;
@@ -25,7 +25,7 @@ div.nav ul {
   margin: 0;
   padding-right: 490px;
   list-style: none;
-  min-width: 600px;
+  min-width: 550px;
 }
 
 div.nav li {
@@ -75,6 +75,10 @@ div.nav .current {
   clear: both;
 }
 
+/*header section end */
+
+
+/*main content section start */
 #container #content {
   font: 12px Verdana, Arial, Helvetica, sans-serif;
   text-align: center;
@@ -84,7 +88,7 @@ div.nav .current {
   float: left;
   width: 10%;
   height: 700px;
-  background-color: white;
+  ;
 }
 
 
@@ -96,18 +100,12 @@ div.nav .current {
   align-items: center;
   font-family: "Playfair Display";
   font-size: 22px;
-  align-items: center;
   flex-direction: column;
 }
 
-#locationLink:visited {
-  color: blue;
+#content .col2 p{
+  color: white;
 }
-
-#locationLink:hover {
-  color: red;
-}
-
 
 
 #content .col3 {
@@ -115,6 +113,118 @@ div.nav .current {
   width: 10%;
   height: 700px;
 }
+
+#locationLink:visited {
+  color: black;
+}
+
+#locationLink:hover {
+  color: red;
+}
+
+.left{
+  float:left;
+}
+
+.right{
+  float:right;
+}
+
+.center{
+  clear:both;
+}
+
+/*form settings start */ 
+form{
+  text-align: left;
+  
+}
+
+form div{
+  padding-top: 10px;
+}
+
+form label{
+  padding-right: 30px;
+}
+
+#content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  background: linear-gradient(135deg,#71b7e6,#9b59b6)
+}
+
+.container{
+  max-width: 800px;
+  min-width: 600px;
+  width:100%;
+  background:white;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.title{
+  position: relative;
+}
+
+.title::before{
+  content:"";
+  position: absolute;
+  height: 3px;
+  width: 190px;
+  bottom: 0;
+  background: linear-gradient(135deg,#71b7e6,#9b59b6)
+}
+
+.inputName{
+  font-size:15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  
+}
+
+
+#submit{
+  align-items: center;
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width:100%;
+  display:block;
+  cursor:pointer;
+  transition-duration: 0.4s;
+  background: linear-gradient(135deg,#71b7e6,#9b59b6);
+  border:0px;
+  
+}
+
+#submit:hover{
+  color:white;
+}
+
+input.wide{
+  margin-top:10px;
+  width:50%;
+  border-radius: 3px;
+}
+
+
+
+
+/*form settings end */ 
+
+
+
+
+
+
+
+
+/*main content section end */
+
 
 #container #footer {
   clear: both;
