@@ -188,6 +188,7 @@ form label{
 
 #submit{
   align-items: center;
+  color:white;
   margin:auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -202,7 +203,7 @@ form label{
 }
 
 #submit:hover{
-  color:white;
+  color:black;
 }
 
 input.wide{
