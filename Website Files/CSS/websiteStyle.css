@@ -19,13 +19,13 @@ body {
 
 div.nav {
   float: right;
-  min-width: 600px;
 }
 
 div.nav ul {
   margin: 0;
   padding-right: 490px;
   list-style: none;
+  min-width: 600px;
 }
 
 div.nav li {
@@ -65,7 +65,6 @@ div.nav .current {
 
 #container #header {
   background-color: #55d6aa;
-  min-width: 500px;
   text-align: center;
   font: 24px Verdana, Arial, Helvetica, sans-serif;
 }
@@ -91,7 +90,7 @@ div.nav .current {
 
 #content .col2 {
   width: 90%;
-  min-width: 500px;
+  min-width: 900px;
   height: 700px;
   color: black;
   align-items: center;
