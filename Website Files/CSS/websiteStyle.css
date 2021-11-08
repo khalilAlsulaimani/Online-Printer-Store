@@ -134,6 +134,19 @@ div.nav .current {
   clear:both;
 }
 
+.pictures{
+  width:50%;
+  float:left;
+  font-size: 18px;
+  text-align: center;
+  margin-top:40px;
+}
+.pictures img{
+border:solid 2px gray;
+border-radius: 10px;
+
+}
+
 /*form settings start */ 
 form{
   text-align: left;
