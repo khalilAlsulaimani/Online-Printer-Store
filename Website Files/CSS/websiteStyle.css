@@ -144,6 +144,7 @@ div.nav .current {
 .pictures img{
 border:solid 2px gray;
 border-radius: 10px;
+margin: 15px;
 
 }
 
@@ -191,6 +192,21 @@ form label{
   background: linear-gradient(135deg,#71b7e6,#9b59b6)
 }
 
+#feedbackTitle{
+  position: relative;
+
+}
+
+#feedbackTitle::before{
+  content:"";
+  position: absolute;
+  height: 3px;
+  width: 130px;
+  bottom: 0;
+  background: linear-gradient(135deg,#71b7e6,#9b59b6)
+
+}
+
 .inputName{
   font-size:15px;
   margin-bottom: 5px;
@@ -199,7 +215,7 @@ form label{
 }
 
 
-#submit{
+.submit{
   align-items: center;
   color:white;
   margin:auto;
@@ -215,7 +231,7 @@ form label{
   
 }
 
-#submit:hover{
+.submit:hover{
   color:black;
 }
 
@@ -224,6 +240,27 @@ input.wide{
   width:50%;
   border-radius: 3px;
 }
+
+.shoppingPageBuyButton{
+  align-items: center;
+  color:black;
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  display:block;
+  cursor:pointer;
+  transition-duration: 0.4s;
+  background: white;
+  border:0px;
+  text-decoration: none;
+
+}
+
+.shoppingPageBuyButton:hover{
+  color:darkorchid;
+}
+
 
 
 
