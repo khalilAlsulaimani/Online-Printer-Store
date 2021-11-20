@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+
 /*header section start */
 #logo {
   background-image: url("Images\ShopLogo.png");
@@ -93,7 +94,7 @@ div.nav .current {
 #content .col2 {
   width: 90%;
   min-width: 900px;
-  height: 700px;
+  height: 1500px;
   color: black;
   align-items: center;
   font-family: "Playfair Display";
@@ -101,7 +102,7 @@ div.nav .current {
   flex-direction: column;
 }
 
-#content .col2 p{
+#content .col2 p {
   color: white;
 }
 
@@ -120,144 +121,153 @@ div.nav .current {
   color: red;
 }
 
-.left{
-  float:left;
+.left {
+  float: left;
 }
 
-.right{
-  float:right;
+.right {
+  float: right;
 }
 
-.center{
-  clear:both;
+.center {
+  clear: both;
 }
 
-.pictures{
-  width:50%;
-  float:left;
+.pictures {
+  width: 50%;
+  float: left;
   font-size: 18px;
   text-align: center;
-  margin-top:40px;
+  margin-top: 40px;
 }
-.pictures img{
-border:solid 2px gray;
-border-radius: 10px;
-margin: 15px;
+
+.pictures img {
+  border: solid 2px gray;
+  border-radius: 10px;
+  margin: 15px;
 
 }
 
-/*form settings start */ 
-form{
+/*form settings start */
+form {
   text-align: left;
-  
+
 }
 
-form div{
+form div {
   padding-top: 10px;
 }
 
-form label{
+form label {
   padding-right: 30px;
 }
 
-#content{
-  display:flex;
+#content {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding:10px;
+  padding: 10px;
   background: #71b7e6
 }
 
-.container{
+.container {
   max-width: 800px;
   min-width: 600px;
-  width:100%;
-  background:white;
+  width: 100%;
+  background: white;
   padding: 25px 30px;
   border-radius: 5px;
 }
 
-.title{
+.title {
   position: relative;
 }
 
 
-#feedbackTitle{
+#feedbackTitle {
   position: relative;
 
 }
 
 
 
-.inputName{
-  font-size:15px;
+.inputName {
+  font-size: 15px;
   margin-bottom: 5px;
   font-weight: bold;
-  
+
 }
 
 
-.submit{
+.submit {
   align-items: center;
-  color:white;
-  margin:auto;
+  color: white;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  width:100%;
-  display:block;
-  cursor:pointer;
+  width: 100%;
+  display: block;
+  cursor: pointer;
   transition-duration: 0.4s;
   background: #71b7e6;
-  border:0px;
-  
+  border: 0px;
+
 }
 
-.submit:hover{
-  color:black;
+.submit:hover {
+  color: black;
 }
 
-input.wide{
-  margin-top:10px;
-  width:50%;
+input.wide {
+  margin-top: 10px;
+  width: 50%;
   border-radius: 3px;
 }
 
-.shoppingPageBuyButton{
+.shoppingPageBuyButton {
   align-items: center;
-  color:black;
-  margin:auto;
+  color: black;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 3px;
-  display:block;
-  cursor:pointer;
+  display: block;
+  cursor: pointer;
   transition-duration: 0.4s;
   background: white;
-  border:0px;
+  border: 0px;
   text-decoration: none;
 
 }
 
-.shoppingPageBuyButton:hover{
-  color:darkorchid;
+.shoppingPageBuyButton:hover {
+  color: darkorchid;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
+.loginForm {
+  max-width: 800px;
+  min-width: 600px;
+  width: 100%;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 15px;
+
+}
 
 
 
 
-/*form settings end */ 
 
 
 
-
-
-
+/*form settings end */
 
 
 /*main content section end */
