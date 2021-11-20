@@ -45,7 +45,7 @@ div.nav a:hover {
   color: #000;
 }
 
-div.nav a:before {
+div.nav a {
   content: "";
   display: block;
   height: 5px;
@@ -55,9 +55,7 @@ div.nav a:before {
   transition: all ease-in-out 250ms;
 }
 
-div.nav a:hover::before {
-  width: 100%;
-}
+
 
 div.nav .current {
   color: black;
@@ -167,7 +165,7 @@ form label{
   justify-content: center;
   align-items: center;
   padding:10px;
-  background: linear-gradient(135deg,#71b7e6,#9b59b6)
+  background: #71b7e6
 }
 
 .container{
@@ -183,29 +181,13 @@ form label{
   position: relative;
 }
 
-.title::before{
-  content:"";
-  position: absolute;
-  height: 3px;
-  width: 190px;
-  bottom: 0;
-  background: linear-gradient(135deg,#71b7e6,#9b59b6)
-}
 
 #feedbackTitle{
   position: relative;
 
 }
 
-#feedbackTitle::before{
-  content:"";
-  position: absolute;
-  height: 3px;
-  width: 130px;
-  bottom: 0;
-  background: linear-gradient(135deg,#71b7e6,#9b59b6)
 
-}
 
 .inputName{
   font-size:15px;
@@ -226,7 +208,7 @@ form label{
   display:block;
   cursor:pointer;
   transition-duration: 0.4s;
-  background: linear-gradient(135deg,#71b7e6,#9b59b6);
+  background: #71b7e6;
   border:0px;
   
 }
