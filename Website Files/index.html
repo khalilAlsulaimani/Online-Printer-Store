@@ -6,6 +6,7 @@
     <title>Abyss Printer Store</title>
     <link rel="shortcut icon" href="Images\ShopLogo.png">
     <link rel="stylesheet" type="text/css" href="CSS\styles.css">
+    <script defer type="text/javascript" src="Scripts\script.js"></script>
 </head>
 
 <body>
@@ -26,16 +27,17 @@
             <div class="col2">
                 <div class="loginForm">
                     <h1 class="title">Sign In</h1>
-                    <form action="" method="post">
+                    <div id='loginMessage'></div>
+                    <form  id="indexForm" action="#" method="post">
 
                         <label>
-                            <div class="inputName">Username:</div><input class="wide" type="text" name="username"
-                                placeholder="Enter Your Username" />
+                            <div class="inputName">Username:</div><input class="wide" type="text" id="loginUsername"
+                                name="username" placeholder="Enter Your Username" />
                         </label>
 
                         <label>
-                            <div class="inputName">Password:</div><input class="wide" type="password" name="password"
-                                placeholder="Enter Your Password" />
+                            <div class="inputName">Password:</div><input class="wide" id="loginPassword" name="password"
+                                placeholder="Enter" type="password" name="password" placeholder="Enter Your Password" />
                         </label>
                         <label>
                             <div>Remember Me<input type="checkbox" name="Remember Me" /></div>
