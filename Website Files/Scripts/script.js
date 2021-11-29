@@ -1,9 +1,11 @@
 const username = document.getElementById("loginUsername");
 const password = document.getElementById("loginPassword");
 const loginMessage = document.getElementById("loginMessage");
-const form = document.getElementById("indexForm");
+const IndexForm = document.getElementById("indexForm");
 
-form.addEventListener("submit", (e) => {
+
+// validation for the index form 
+IndexForm.addEventListener("submit", (e) => {
     if (username.value == "" || username.value == null) {
         loginMessage.style.color = "red";
         loginMessage.innerText = "Empty Username Detected";
@@ -21,3 +23,14 @@ form.addEventListener("submit", (e) => {
         e.preventDefault();
     }
 });
+
+
+
+function focused(id) {
+    id.style.backgroundColor = "yellow";
+}
+
+
+function blurred(id) {
+    id.style.backgroundColor = "";
+}

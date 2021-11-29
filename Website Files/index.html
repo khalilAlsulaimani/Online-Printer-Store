@@ -32,12 +32,13 @@
 
                         <label>
                             <div class="inputName">Username:</div><input class="wide" type="text" id="loginUsername"
-                                name="username" placeholder="Enter Your Username" />
+                                name="username" placeholder="Enter Your Username" onFocus="focused(this)" onBlur="blurred(this)" />
                         </label>
 
                         <label>
                             <div class="inputName">Password:</div><input class="wide" id="loginPassword" name="password"
-                                placeholder="Enter" type="password" name="password" placeholder="Enter Your Password" />
+                                placeholder="Enter Your password" type="password" name="password" onFocus="focused(this)"
+                                 onBlur="blurred(this)" />
                         </label>
                         <label>
                             <div>Remember Me<input type="checkbox" name="Remember Me" /></div>

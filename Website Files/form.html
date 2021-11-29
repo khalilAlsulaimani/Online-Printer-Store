@@ -3,10 +3,11 @@
 <html>
 
 <head>
-   
+
     <title>Abyss Printer Store</title>
     <link rel="shortcut icon" href="Images\ShopLogo.png">
     <link rel="stylesheet" type="text/css" href="CSS\styles.css">
+    <script defer type="text/javascript" src="Scripts\script.js"></script>
 </head>
 
 <body>
@@ -32,12 +33,17 @@
                     <div class="buyerDetails">
                         <label>
                             <div class="inputName">Full Name:</div><input class="wide" type="text" name="name"
-                                placeholder="Enter Your Name" />
+                                placeholder="Enter Your Name" onFocus="focused(this)" onBlur="blurred(this)" />
                         </label>
+                        <label>
+                            <div class="inputName">Phone Number:</div><input class="wide" type="text" name="number"
+                                placeholder="Enter Your  Phone Number" onFocus="focused(this)" onBlur="blurred(this)" />
+                        </label>
+
 
                         <label>
                             <div class="inputName">Email:</div><input class="wide" type="email" name="email"
-                                placeholder="Enter Your Email" />
+                                placeholder="Enter Your Email" onFocus="focused(this)" onBlur="blurred(this)" />
                         </label>
 
                         <label>
@@ -55,7 +61,8 @@
                         <label>
                             <div class="inputName">Topic:</div>
                             <select class="wide" name="city">
-                                <option class="wide" value=" " disabled selected="selected">Choose Feedback Topic--</option>
+                                <option class="wide" value=" " disabled selected="selected">Choose Feedback Topic--
+                                </option>
                                 <option>Suggestion</option>
                                 <option>Madina</option>
                                 <option>Complaint</option>
@@ -67,12 +74,12 @@
 
                         <label>
                             <div class="inputName">Title:</div><input class="wide" type="text" name="feedbackTitle"
-                                placeholder="Enter Your Title Of Feedback Message" />
+                                placeholder="Enter Your Title Of Feedback Message" onFocus="focused(this)" onBlur="blurred(this)" />
                         </label>
 
                         <label>
                             <div class="inputName">Message Title:</div><textarea name="feedback body" rows="10"
-                                cols=60%>
+                                cols=60% onFocus="focused(this)" onBlur="blurred(this)">
 
                             </textarea>
                         </label>
