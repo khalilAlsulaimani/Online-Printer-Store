@@ -94,7 +94,7 @@ div.nav .current {
 #content .col2 {
   width: 90%;
   min-width: 900px;
-  height: 1500px;
+  height: 1700px;
   color: black;
   align-items: center;
   font-family: "Playfair Display";
@@ -259,6 +259,17 @@ a {
   margin: 0 auto;
   font-size: 15px;
 
+}
+
+#contactInfo{
+  text-align: left;
+  color:white;
+
+}
+#contactInfo h2{
+  color:black;
+  text-align: center;
+ 
 }
 
 
