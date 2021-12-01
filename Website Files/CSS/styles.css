@@ -302,6 +302,10 @@ a {
   
 }
 
+.keyUpMessage{
+  display: inline-block;
+}
+
 
 
 
