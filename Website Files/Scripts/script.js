@@ -32,32 +32,75 @@ function signIn() {
 const fullName = document.getElementById("names");
 const feedbackMessage = document.getElementById("feedbackMessage");
 const keyUpMessage = document.getElementById("keyUpMessage");
+const phoneNumber = document.getElementById("phoneNumber");
+const feedbackEmail = document.getElementById("feedbackEmail");
 
 function FeedbackForm() {
+    feedbackMessage.innerText = "";
     feedbackMessage.style.color = "red";
     feedbackMessage.style.fontSize = "20px";
+    var bool = true;
+
+    // name validation
     if (fullName.value == "" || fullName.value == null) {
-        feedbackMessage.innerText = "Empty Full Name";
-        return false;
+        feedbackMessage.innerText += "Empty Full Name\n";
+        bool = false;
     } else if (fullName.value.length < 6) {
-        feedbackMessage.innerText = "Full Name Must Be At Least 6 Characters Given Was " + fullName.value.length;
-        return false;
-    }else if(checkName){
-        return false;
+        feedbackMessage.innerText += "Full Name Must Be At Least 6 Characters Given Was " + fullName.value.length + "\n";
+        bool = false;
     }
-    return true;
+    // onkeyup test 
+    if (isNameNotString()) {
+        bool = false;
+
+    }
+
+
+    // number validation
+    if (phoneNumber.value == "" || phoneNumber.value == null) {
+        feedbackMessage.innerText += "Phone Number Is Empty\n";
+        bool = false;
+    } else if (phoneNumber.value.length != 12) {
+        feedbackMessage.innerText += "Number Must Be At Least 12 Characters Given Was " + phoneNumber.value.length + "\n";
+        bool = false;
+    } else if (!(phoneNumber.value.startsWith("9665"))) {
+        feedbackMessage.innerText += "Number Must Start With 9665\n";
+        bool = false;
+    }
+
+    // email validation
+    var emailRegEx = new RegExp("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
+    if (feedbackEmail.value == "" || feedbackEmail.value == null) {
+        feedbackMessage.innerText += "Email  Is Empty\n";
+        bool = false;
+    }else if(!emailRegEx.test(feedbackEmail.value)){
+        feedbackMessage.innerText += "Email  Is Invalid\n";
+        bool = false;
+    }
+    
+
+
+    
+   
+    console.log(bool);
+    
+
+    return bool;
+    
+
+
 }
 
-function checkName() {
-    keyUpMessage.innerText="";
+function isNameNotString() {
+    keyUpMessage.innerText = "";
     keyUpMessage.style.color = "red";
     keyUpMessage.style.fontSize = "15";
     var regEx = new RegExp("\\d+");
-    if (regEx.test(fullName.value)){
+    if (regEx.test(fullName.value)) {
         keyUpMessage.innerText = "Numbers Cannot Be In Name";
-        return false;
+        return true;
     }
-
+    return false;
 }
 
 

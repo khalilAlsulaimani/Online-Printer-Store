@@ -30,22 +30,24 @@
                 <h1 id="feedbackTitle">Feedback</h1>
                 <div id="feedbackMessage"></div>
 
-                <form  action="#" method="post" onSubmit="return FeedbackForm()">
+                <form action="#" method="post" onSubmit="return FeedbackForm()">
                     <div class="buyerDetails">
                         <label>
-                            <div class="inputName">Full Name:</div><input class="wide" type="text" name="name" id="names"
-                                placeholder="Enter Your Name" onFocus="focused(this)" onBlur="blurred(this)" onKeyUp="checkName()"/>
-                                
+                            <div class="inputName">Full Name:</div><input class="wide" type="text" name="name"
+                                id="names" placeholder="Enter Your Name" onFocus="focused(this)" onBlur="blurred(this)"
+                                onKeyUp="isNameNotString()" />
+
                         </label>
                         <div class="keyUpMessage" id="keyUpMessage"></div>
                         <label>
                             <div class="inputName">Phone Number:</div><input class="wide" type="text" name="number"
-                                placeholder="Enter Your  Phone Number" onFocus="focused(this)" onBlur="blurred(this)" />
+                                id="phoneNumber" placeholder="Enter Your  Phone Number" onFocus="focused(this)"
+                                onBlur="blurred(this)" />
                         </label>
 
 
                         <label>
-                            <div class="inputName">Email:</div><input class="wide" type="email" name="email"
+                            <div class="inputName">Email:</div><input class="wide" type="email" name="email" id="feedbackEmail"
                                 placeholder="Enter Your Email" onFocus="focused(this)" onBlur="blurred(this)" />
                         </label>
 
@@ -77,24 +79,19 @@
 
                         <label>
                             <div class="inputName">Title:</div><input class="wide" type="text" name="feedbackTitle"
-                                placeholder="Enter Your Title Of Feedback Message" onFocus="focused(this)" onBlur="blurred(this)" />
+                                placeholder="Enter Your Title Of Feedback Message" onFocus="focused(this)"
+                                onBlur="blurred(this)" />
                         </label>
 
                         <label>
-                            <div class="inputName">Message Title:</div><textarea name="feedback body" rows="10"
-                                cols=60% onFocus="focused(this)" onBlur="blurred(this)">
+                            <div class="inputName">Message Title:</div><textarea name="feedback body" rows="10" cols=60%
+                                onFocus="focused(this)" onBlur="blurred(this)">
 
                             </textarea>
                         </label>
 
                         <div><input class="submit" type="submit" name="feedbackBody" value="Send Feedback" /></div>
                     </div>
-
-
-
-
-
-
                 </form>
 
             </div>
