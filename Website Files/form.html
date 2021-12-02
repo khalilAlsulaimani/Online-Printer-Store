@@ -54,7 +54,7 @@
                        
                         <label>
                             <div class="inputName">Topic:</div>
-                            <select class="wide" name="city">
+                            <select class="wide" name="topic" id="topic">
                                 <option class="wide" value=" " disabled selected="selected">Choose Feedback Topic--
                                 </option>
                                 <option>Suggestion</option>
@@ -66,16 +66,14 @@
                         </label>
 
                         <label>
-                            <div class="inputName">Title:</div><input class="wide" type="text" name="feedbackTitle"
+                            <div class="inputName">Title:</div><input class="wide" type="text" name="feedbackTitle" id="title"
                                 placeholder="Enter Your Title Of Feedback Message" onFocus="focused(this)"
                                 onBlur="blurred(this)" />
                         </label>
 
                         <label>
-                            <div class="inputName">Message Title:</div><textarea name="feedback body" rows="10" cols=60%
-                                onFocus="focused(this)" onBlur="blurred(this)">
-
-                            </textarea>
+                            <div class="inputName">Message Body:</div><textarea name="feedback body" rows="10" cols=60% id="messageBody"
+                                onFocus="focused(this)" onBlur="blurred(this)"></textarea>
                         </label>
 
                         <div><input class="submit" type="submit" name="feedbackBody" value="Send Feedback" /></div>

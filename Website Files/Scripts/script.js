@@ -34,6 +34,9 @@ const feedbackMessage = document.getElementById("feedbackMessage");
 const keyUpMessage = document.getElementById("keyUpMessage");
 const phoneNumber = document.getElementById("phoneNumber");
 const feedbackEmail = document.getElementById("feedbackEmail");
+const topic = document.getElementById("topic");
+const title = document.getElementById("title");
+const messageBody = document.getElementById("messageBody");
 
 function FeedbackForm() {
     feedbackMessage.innerText = "";
@@ -58,7 +61,7 @@ function FeedbackForm() {
 
     // number validation
     if (phoneNumber.value == "" || phoneNumber.value == null) {
-        feedbackMessage.innerText += "Phone Number Is Empty\n";
+        feedbackMessage.innerText += "Empty Phone Number\n";
         bool = false;
     } else if (phoneNumber.value.length != 12) {
         feedbackMessage.innerText += "Number Must Be At Least 12 Characters Given Was " + phoneNumber.value.length + "\n";
@@ -71,24 +74,31 @@ function FeedbackForm() {
     // email validation
     var emailRegEx = new RegExp("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
     if (feedbackEmail.value == "" || feedbackEmail.value == null) {
-        feedbackMessage.innerText += "Email  Is Empty\n";
+        feedbackMessage.innerText += "Empty Email\n";
         bool = false;
-    }else if(!emailRegEx.test(feedbackEmail.value)){
+    } else if (!emailRegEx.test(feedbackEmail.value)) {
         feedbackMessage.innerText += "Email  Is Invalid\n";
         bool = false;
     }
-    
 
+    // topic validation
+    if (topic.value.length == 1) {
+        feedbackMessage.innerText += "Empty Topic\n";
+        bool = false;
+    }
 
-    
-   
-    console.log(bool);
-    
+    // message  title and body validation 
+    if (title.value == "" || title.value == null) {
+        feedbackMessage.innerText += "Empty Title\n";
+        bool = false;
+    }
 
+    if (messageBody.value.length<1 ||messageBody.value ==null ) {
+        feedbackMessage.innerText += "Empty Message Body\n";
+        bool = false;
+    }
+    //console.log(messageBody.value.length<1) ;
     return bool;
-    
-
-
 }
 
 function isNameNotString() {
