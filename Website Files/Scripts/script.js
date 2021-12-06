@@ -5,25 +5,30 @@ const IndexForm = document.getElementById("indexForm");
 
 // validation for the index form 
 function signIn() {
+    loginMessage.innerText ="";
     loginMessage.style.color = "red";
     loginMessage.style.fontSize = "20px";
+    var bool = true;
     if (username.value == "" || username.value == null) {
 
-        loginMessage.innerText = "Empty Username Detected";
-        return false;
-    } else if (password.value === "" || password.value == null) {
-        loginMessage.innerText = "Empty Password Detected";
-        return false;
+        loginMessage.innerText += "Empty Username Detected\n";
+        bool = false;
     } else if (username.value.length < 4) {
-        loginMessage.innerText = "Username Must Be At Least 4 Characters Given Was " + username.value.length;
-        return false;
-    } else if (password.value.length < 6) {
-        loginMessage.innerText =
-            "Password Must Be At Least 6 characters Given Was " +
-            password.value.length;
-        return false;
+        loginMessage.innerText += "Username Must Be At Least 4 Characters Given Was " + username.value.length+"\n";
+        bool = false;
     }
-    return true;
+
+    if (password.value === "" || password.value == null) {
+        loginMessage.innerText += "Empty Password Detected\n";
+        bool = false;
+
+    } else if (password.value.length < 6) {
+        loginMessage.innerText +=
+            "Password Must Be At Least 6 characters Given Was " +
+            password.value.length+"\n";
+        bool = false;
+    }
+    return bool;
 }
 
 
@@ -93,7 +98,7 @@ function FeedbackForm() {
         bool = false;
     }
 
-    if (messageBody.value.length<1 ||messageBody.value ==null ) {
+    if (messageBody.value.length < 1 || messageBody.value == null) {
         feedbackMessage.innerText += "Empty Message Body\n";
         bool = false;
     }
