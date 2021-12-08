@@ -5,7 +5,7 @@ const IndexForm = document.getElementById("indexForm");
 
 // validation for the index form 
 function signIn() {
-    loginMessage.innerText ="";
+    loginMessage.innerText = "";
     loginMessage.style.color = "red";
     loginMessage.style.fontSize = "20px";
     var bool = true;
@@ -14,7 +14,7 @@ function signIn() {
         loginMessage.innerText += "Empty Username Detected\n";
         bool = false;
     } else if (username.value.length < 4) {
-        loginMessage.innerText += "Username Must Be At Least 4 Characters Given Was " + username.value.length+"\n";
+        loginMessage.innerText += "Username Must Be At Least 4 Characters Given Was " + username.value.length + "\n";
         bool = false;
     }
 
@@ -25,7 +25,7 @@ function signIn() {
     } else if (password.value.length < 6) {
         loginMessage.innerText +=
             "Password Must Be At Least 6 characters Given Was " +
-            password.value.length+"\n";
+            password.value.length + "\n";
         bool = false;
     }
     return bool;
@@ -65,16 +65,29 @@ function FeedbackForm() {
 
 
     // number validation
+    var letterTest = new RegExp("\\D+");
+
     if (phoneNumber.value == "" || phoneNumber.value == null) {
         feedbackMessage.innerText += "Empty Phone Number\n";
         bool = false;
-    } else if (phoneNumber.value.length != 12) {
-        feedbackMessage.innerText += "Number Must Be At Least 12 Characters Given Was " + phoneNumber.value.length + "\n";
-        bool = false;
-    } else if (!(phoneNumber.value.startsWith("9665"))) {
-        feedbackMessage.innerText += "Number Must Start With 9665\n";
-        bool = false;
+    } else {
+        if (phoneNumber.value.length != 12) {
+            feedbackMessage.innerText += "Number Must Be At Least 12 Characters Given Was " + phoneNumber.value.length + "\n";
+            bool = false;
+        }
+        if (letterTest.test(phoneNumber.value)) {
+            feedbackMessage.innerText += "Number Cannot Contain Letters\n";
+            bool = false;
+        }
+        if (!(phoneNumber.value.startsWith("9665"))) {
+            feedbackMessage.innerText += "Number Must Start With 9665\n";
+            bool = false;
+        }
+
+
+
     }
+
 
     // email validation
     var emailRegEx = new RegExp("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
