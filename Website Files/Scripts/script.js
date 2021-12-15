@@ -36,6 +36,7 @@ const ShoppingEmail = document.getElementById("ShoppingEmail");
 const ShoppingPass = document.getElementById("ShoppingPass");
 const Printer = document.getElementById("Printer");
 const City = document.getElementById("City");
+const ShoppingkeyUpMessage = document.getElementById("ShoppingkeyUpMessage");
 
 // validating Shopping page
 function ShoppingForm(){
@@ -88,12 +89,12 @@ function ShoppingForm(){
 	return bool;
 }
 function isShoppingNameString() {
-	ShoppingMessage.innerText = "";
-    ShoppingMessage.style.color = "red";
-    ShoppingMessage.style.fontSize = "20px";
+	ShoppingkeyUpMessage.innerText = "";
+    ShoppingkeyUpMessage.style.color = "red";
+    ShoppingkeyUpMessage.style.fontSize = "15";
     var regEx = new RegExp("\\d+");
     if (regEx.test(ShoppingName.value)) {
-        ShoppingMessage.innerText += "Name Must not contain numbers"
+        ShoppingkeyUpMessage.innerText = "Numbers Cannot Be In Name";
         return true;
     }
 	
