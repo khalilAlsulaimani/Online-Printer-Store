@@ -33,6 +33,7 @@ function signIn(){
 const ShoppingName = document.getElementById("ShoppingName");
 const ShoppingMessage = document.getElementById("ShoppingMessage");
 const ShoppingEmail = document.getElementById("ShoppingEmail");
+const ShoppingPass = document.getElementById("ShoppingPass");
 
 // validating Shopping page
 function ShoppingForm(){
@@ -60,6 +61,16 @@ function ShoppingForm(){
         bool = false;
     } else if (!emailRegEx.test(ShoppingEmail.value)) {
         ShoppingMessage.innerText += "Email  Is Invalid \n";
+        bool = false;
+    }
+	// Password validation
+	if (ShoppingPass.value === "" || ShoppingPass.value == null) {
+        ShoppingMessage.innerText += "Empty Password Detected\n";
+        bool = false;
+
+    } else if (ShoppingPass.value.length < 6) {
+        ShoppingMessage.innerText +="Password Must Be At Least 6 characters Given Was " +
+            ShoppingPass.value.length + "\n";
         bool = false;
     }
 	return bool;
