@@ -1,10 +1,9 @@
 const username = document.getElementById("loginUsername");
 const password = document.getElementById("loginPassword");
 const loginMessage = document.getElementById("loginMessage");
-const IndexForm = document.getElementById("indexForm");
 
 // validation for the index form 
-function signIn() {
+function signIn(){
     loginMessage.innerText = "";
     loginMessage.style.color = "red";
     loginMessage.style.fontSize = "20px";
@@ -23,14 +22,50 @@ function signIn() {
         bool = false;
 
     } else if (password.value.length < 6) {
-        loginMessage.innerText +=
-            "Password Must Be At Least 6 characters Given Was " +
+        loginMessage.innerText +="Password Must Be At Least 6 characters Given Was " +
             password.value.length + "\n";
         bool = false;
     }
     return bool;
 }
 
+
+const ShoppingName = document.getElementById("ShoppingName");
+const ShoppingMessage = document.getElementById("ShoppingMessage");
+
+// validating Shopping page
+function ShoppingForm(){
+	ShoppingMessage.innerText = "";
+    ShoppingMessage.style.color = "red";
+    ShoppingMessage.style.fontSize = "20px";
+	var bool = true;
+	
+	
+	
+	// name validation
+	if (ShoppingName.value== "" || ShoppingName.value==null){
+		ShoppingMessage.innerText += "Empty Name Detected\n";
+		bool = false;
+	}else if (ShoppingName.value.length<4){
+		ShoppingMessage.innerText += "the minimum number of letters in a name is 4\n";
+		bool = false;
+		
+	}
+	return bool;
+}
+function isShoppingNameString() {
+	ShoppingMessage.innerText = "";
+    ShoppingMessage.style.color = "red";
+    ShoppingMessage.style.fontSize = "20px";
+    var regEx = new RegExp("\\d+");
+    if (regEx.test(ShoppingName.value)) {
+        ShoppingMessage.innerText += "Name Must not contain numbers"
+        return true;
+    }
+	
+    return false;
+}
+	 
 
 // validating feedback page
 
@@ -130,6 +165,7 @@ function isNameNotString() {
     }
     return false;
 }
+
 
 
 // changing textBox/fields to yellow and white 

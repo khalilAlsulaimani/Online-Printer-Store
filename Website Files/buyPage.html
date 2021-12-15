@@ -3,10 +3,11 @@
 <html>
 
 <head>
+
     <title>Abyss Printer Store</title>
     <link rel="shortcut icon" href="Images\ShopLogo.png">
     <link rel="stylesheet" type="text/css" href="CSS\styles.css">
-    <script defer type="text/javascript" src="Scripts\script.js"></script>
+	<script defer type="text/javascript" src="Scripts\script.js"></script>	
 </head>
 
 <body>
@@ -27,12 +28,14 @@
 
             <div class="container">
                 <h1 class="title">Shopping Cart</h1>
-
-                <form action="process.php" method="post">
+				<div id="ShoppingMessage"></div>
+				
+                <form action="process.php" method="post" onSubmit="return ShoppingForm()">
                     <div class="buyerDetails">
                         <label>
-                            <div class="inputName">Full Name:</div><input class="wide" type="text" name="name"
-                                placeholder="Enter Your Name" onFocus="focused(this)" onBlur="blurred(this)"/>
+                            <div class="inputName">Full Name:</div><input class="wide" type="text" name="ShoppingName" id="ShoppingName"
+                                placeholder="Enter Your Name" onFocus="focused(this)" onBlur="blurred(this)" 
+								onkeyup ="isShoppingNameString()" />
                         </label>
 
                         <label>
@@ -93,7 +96,7 @@
                             </select>
                         </label>
 
-                        <div><input class="submit" type="submit" value="Order" /></div>
+                        <div><input class="submit" type="submit" name="ShoppingBody" value="Order" /></div>
                     </div>
 
 
