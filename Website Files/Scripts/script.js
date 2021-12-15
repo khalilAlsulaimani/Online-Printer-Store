@@ -34,6 +34,8 @@ const ShoppingName = document.getElementById("ShoppingName");
 const ShoppingMessage = document.getElementById("ShoppingMessage");
 const ShoppingEmail = document.getElementById("ShoppingEmail");
 const ShoppingPass = document.getElementById("ShoppingPass");
+const Printer = document.getElementById("Printer");
+const City = document.getElementById("City");
 
 // validating Shopping page
 function ShoppingForm(){
@@ -73,6 +75,16 @@ function ShoppingForm(){
             ShoppingPass.value.length + "\n";
         bool = false;
     }
+	// Printer validation
+    if (Printer.value.length == 0) {
+        ShoppingMessage.innerText += "Empty Printer\n";
+        bool = false;
+    }
+	// City validation
+    if (City.value.length == 1) {
+        ShoppingMessage.innerText += "Empty City\n";
+        bool = false;
+    }
 	return bool;
 }
 function isShoppingNameString() {
@@ -84,6 +96,8 @@ function isShoppingNameString() {
         ShoppingMessage.innerText += "Name Must not contain numbers"
         return true;
     }
+	
+	
 	
     return false;
 }
