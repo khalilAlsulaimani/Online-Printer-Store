@@ -32,6 +32,7 @@ function signIn(){
 
 const ShoppingName = document.getElementById("ShoppingName");
 const ShoppingMessage = document.getElementById("ShoppingMessage");
+const ShoppingEmail = document.getElementById("ShoppingEmail");
 
 // validating Shopping page
 function ShoppingForm(){
@@ -51,6 +52,16 @@ function ShoppingForm(){
 		bool = false;
 		
 	}
+	// email validation
+    var emailRegEx = new RegExp("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
+    
+	if (ShoppingEmail.value == "" || ShoppingEmail.value == null) {
+        ShoppingMessage.innerText += "Empty Email \n";
+        bool = false;
+    } else if (!emailRegEx.test(ShoppingEmail.value)) {
+        ShoppingMessage.innerText += "Email  Is Invalid \n";
+        bool = false;
+    }
 	return bool;
 }
 function isShoppingNameString() {
